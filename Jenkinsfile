@@ -30,7 +30,8 @@ pipeline {
         stage('Build React App') {
             steps {
                 bat 'npm install'
-                bat 'npm run build'
+                // bat 'npm run build'
+                bat 'npm run build --production'
             }
         }
 
