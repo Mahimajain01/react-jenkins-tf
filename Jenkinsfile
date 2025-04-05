@@ -32,7 +32,8 @@ pipeline {
                 bat 'npm install'
                 // bat 'npm run build'
                 // bat 'npm run build --production'
-                bat 'NODE_ENV=production npm run build'
+                // bat 'NODE_ENV=production npm run build'
+                bat 'npm run build -- --mode production'
             }
         }
 
