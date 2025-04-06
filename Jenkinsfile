@@ -26,6 +26,13 @@ pipeline {
                bat '"%TERRAFORM_PATH%" -chdir=terraform apply -auto-approve tfplan'
            }
      }
+        
+      stage('Check npm') {
+            steps {
+                bat 'where npm'
+                bat 'npm -v'
+            }
+        }
 
         stage('Build React App') {
             steps {
