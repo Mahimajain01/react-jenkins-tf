@@ -27,20 +27,15 @@ pipeline {
            }
      }
         
-      stage('Check npm') {
+      stage('Build React App') {
             steps {
-                bat 'where npm'
-                bat 'npm -v'
-            }
-        }
-
-        stage('Build React App') {
-            steps {
-                bat 'npm install'
+                // bat 'npm install'
                 // bat 'npm run build'
                 // bat 'npm run build --production'
                 // bat 'NODE_ENV=production npm run build'
-                bat 'npm run build -- --mode production'
+                // bat 'npm run build -- --mode production'
+                bat 'npm install'
+                bat 'npm run build --mode production'
             }
         }
 
